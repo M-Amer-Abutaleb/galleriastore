@@ -1,9 +1,10 @@
 import React from 'react';
-import Search from '../components/Search';
+
 import { BsSearch } from 'react-icons/bs';
-import { useGlobalContext } from '../context';
+
+import Photos from './Photos';
 const Home = () => {
-  const { userInput, setUserInput } = useGlobalContext();
+
 	const submitHandler = (e) => {
 		e.preventDefault();
 	};
@@ -11,7 +12,7 @@ const Home = () => {
 		<main className='Home'>
 			<div className='container-fluid header'>
 				<h1 className='header-text'>We can't wait to hear your story!</h1>
-				<form className='search-header'>
+				{/* <form className='search-header'>
 					<input
 						className='input'
 						type='text'
@@ -22,9 +23,10 @@ const Home = () => {
 					<button onClick={submitHandler} type='submit' className='btn btn-lg'>
 						<BsSearch />
 					</button>
-				</form>
+				</form> */}
 			</div>
 			<h1 className='text-white text-center'>Check other's stories!</h1>
+			<Photos />
 		</main>
 	);
 };

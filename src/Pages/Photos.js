@@ -1,10 +1,22 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 import SinglePicture from './SinglePicture';
-import { useGlobalContext } from '../context';
+import { useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
+import { getPhotos } from '../features/photos/photosSlice';
+// import { useGlobalContext } from '../context';
 
 const Photos = () => {
-	const { data, isLoading } = useGlobalContext();
+	// const { data, isLoading } = useGlobalContext();
+	const { data, isLoading } = useSelector((state) => state.photos);
+	const navigate = useNavigate();
+	const dispatch = useDispatch();
+	console.log(data);
+	
+	useEffect(() => {
+		if (!isLoading) {
+			dispatch(getPhotos());
+		}
+	}, [dispatch]);
 
 	if (isLoading) {
 		return (
