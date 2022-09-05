@@ -2,7 +2,7 @@ import React from 'react';
 
 import { BsSearch } from 'react-icons/bs';
 
-import Photos from './Photos';
+import Photos from '../Photos/Photos';
 const Home = () => {
 
 	const submitHandler = (e) => {

@@ -242,7 +242,7 @@ a:hover {
 .header {
 	height: 50rem;
   width: 100%;
-  background-image: url("./Pages/header.jpg");
+  background-image: url("../src/Assets/Imgaes/header.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-size: 100%;

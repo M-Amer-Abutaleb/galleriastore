@@ -1,8 +1,8 @@
 import Navbar from './components/Navbar';
-import Home from './Pages/Home';
+import Home from './Pages/Home/Home';
 import { Routes, Route } from 'react-router-dom';
-import PicturePage from './Pages/PicturePage ';
-import Error from './Pages/Error';
+import Error from './Pages/Error/Error';
+import SinglePicture from './Pages/SinglePicture/SinglePicture';
 
 function App() {
 	return (
@@ -11,7 +11,7 @@ function App() {
 			<main>
 				<Routes>
 					<Route path='/' element={<Home />} />
-					<Route path='/photo/:id' element={<PicturePage />} />
+					<Route path='/photo/:id' element={<SinglePicture />} />
 					<Route path='*' element={<Error />} />
 				</Routes>
 			</main>

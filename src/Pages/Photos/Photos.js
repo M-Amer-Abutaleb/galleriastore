@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import SinglePicture from './SinglePicture';
+import SinglePicture from '../SinglePicture/SinglePicture';
 import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { getPhotos } from '../features/photos/photosSlice';
+import { getPhotos } from '../../Redux/photos/photosSlice';
 // import { useGlobalContext } from '../context';
 
 const Photos = () => {
